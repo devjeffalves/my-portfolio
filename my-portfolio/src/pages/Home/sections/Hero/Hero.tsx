@@ -1,7 +1,9 @@
 import { Button, Container, Grid, Typography, styled } from "@mui/material"
 import Avatar from "../../../../assets/images/avatar.png"
 import DownloadIcon from '@mui/icons-material/Download';
-import EmailIcon from '@mui/icons-material/Email';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+
+
 
 
 const Hero = () => {
@@ -22,7 +24,7 @@ const Hero = () => {
 <>
 <StyledHero>
 
-<Container>
+<Container max-width ="lg">
 <Grid container spacing={2}>
   <Grid item xs={12} md = {4}>
   <StyledImage src={Avatar}/>
@@ -32,16 +34,15 @@ const Hero = () => {
     <Typography color="primary" variant="h1" textAlign = "center">Jéferson Alves</Typography>
     <Typography color="primary" variant="h2" textAlign = "center">I'm a Web Developer</Typography>
    
-    <Grid container>
-        <Grid item xs={12} md={6}>
+    <Grid container display={"flex"} justifyContent={"center"}>
+        <Grid item xs={12} md={4} display={"flex"} justifyContent={"center"} >
             <Button> 
         <DownloadIcon/>Download CV</Button>
 
         </Grid>
-        <Grid item xs={12} md={6} >
+        <Grid item xs={12} md={4} display={"flex"} justifyContent={"center"} >
         <Button>
-        <EmailIcon/>Contact me</Button>
-
+        <MailOutlineIcon/>Contact me</Button>
         </Grid>
         
     </Grid>
